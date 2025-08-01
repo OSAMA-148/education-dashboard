@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import Link from "next/link"
 
 export function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false)
@@ -174,7 +175,7 @@ export function SignUpPage() {
             <p className="text-sm text-muted-foreground">
               لديك حساب بالفعل؟{" "}
               <Button variant="link" className="px-0">
-                تسجيل الدخول
+                <Link href="/signin">تسجيل الدخول</Link>
               </Button>
             </p>
           </div>

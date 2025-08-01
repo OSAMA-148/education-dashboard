@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
+import Link from "next/link"
 
 export function SignInPage() {
   const [showPassword, setShowPassword] = useState(false)
@@ -96,7 +97,7 @@ export function SignInPage() {
             <p className="text-sm text-muted-foreground">
               ليس لديك حساب؟{" "}
               <Button variant="link" className="px-0">
-                إنشاء حساب
+                <Link href="/signup">إنشاء حساب</Link>
               </Button>
             </p>
           </div>
