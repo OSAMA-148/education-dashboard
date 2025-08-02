@@ -9,15 +9,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Checkbox } from "@/components/ui/checkbox"
-import Link from "next/link"
 
 export function SignInPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
-    email: "",
+    code: "",
     password: "",
-    rememberMe: false,
   })
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -42,13 +39,12 @@ export function SignInPage() {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">البريد الإلكتروني</Label>
+              <Label htmlFor="code">كود السنتر</Label>
               <Input
-                id="email"
-                type="email"
-                placeholder="admin@educenter.com"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                id="code"
+                placeholder="أدخل كود السنتر"
+                value={formData.code}
+                onChange={(e) => setFormData({ ...formData, code: e.target.value })}
                 required
               />
             </div>
@@ -78,29 +74,12 @@ export function SignInPage() {
               <Button variant="link" className="px-0 text-sm">
                 نسيت كلمة المرور؟
               </Button>
-              <div className="flex items-center space-x-2 space-x-reverse">
-                <Label htmlFor="remember" className="text-sm">
-                  تذكرني
-                </Label>
-                <Checkbox
-                  id="remember"
-                  checked={formData.rememberMe}
-                  onCheckedChange={(checked) => setFormData({ ...formData, rememberMe: checked as boolean })}
-                />
-              </div>
+              
             </div>
             <Button type="submit" className="w-full">
               تسجيل الدخول
             </Button>
           </form>
-          <div className="mt-6 text-center">
-            <p className="text-sm text-muted-foreground">
-              ليس لديك حساب؟{" "}
-              <Button variant="link" className="px-0">
-                <Link href="/signup">إنشاء حساب</Link>
-              </Button>
-            </p>
-          </div>
         </CardContent>
       </Card>
     </div>
