@@ -19,14 +19,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 
 import { AppSidebar } from "@/components/layout/sidebar"
-import { DashboardOverview } from "@/components/dashboard/overview"
-import { TeachersSection } from "@/components/dashboard/teachers"
-import { StudentsSection } from "@/components/dashboard/students"
-import { ScheduleSection } from "@/components/dashboard/schedule"
-import { StudyMaterialsSection } from "@/components/dashboard/materials"
-import { FeeManagementSection } from "@/components/dashboard/fees"
-import { MessagesSection } from "@/components/dashboard/messages"
-import { AnalyticsSection } from "@/components/dashboard/analytics"
+import { DashboardOverview } from "@/app/(dashboard)/overview/page"
+import { TeachersSection } from "@/app/(dashboard)/teachers/page"
+import { StudentsSection } from "@/app/(dashboard)/students/page"
+import { ScheduleSection } from "@/app/(dashboard)/schedule/page"
+import { StudyMaterialsSection } from "@/app/(dashboard)/materials/page"
+import { FeeManagementSection } from "@/app/(dashboard)/fees/page"
+import { MessagesSection } from "@/app/(dashboard)/messages/page"
+import { AnalyticsSection } from "@/app/(dashboard)/analytics/page"
 
 export default function EducationDashboard() {
   const [activeSection, setActiveSection] = useState("dashboard")
