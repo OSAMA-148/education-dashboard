@@ -49,7 +49,7 @@ export function AppSidebar({ activeSection, setActiveSection }: AppSidebarProps)
         <div className="flex items-center gap-2 px-4 py-2">
           <GraduationCap className="h-8 w-8 text-blue-600" />
           <div>
-            <h2 className="text-lg font-semibold">مركز التعليم الاحترافي</h2>
+            <h2 className="text-lg font-semibold">Academia</h2>
             <p className="text-sm text-muted-foreground">نظام الإدارة</p>
           </div>
         </div>

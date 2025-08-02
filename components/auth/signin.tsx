@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useRouter } from "next/navigation"
 
 export function SignInPage() {
   const [showPassword, setShowPassword] = useState(false)
@@ -16,11 +17,13 @@ export function SignInPage() {
     code: "",
     password: "",
   })
+  const router = useRouter()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle sign in logic here
     console.log("Sign in:", formData)
+    router.push("/") // Redirect to dashboard after sign in
   }
 
   return (
