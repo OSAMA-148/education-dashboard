@@ -28,7 +28,7 @@ const teachers = [
   { id: 3, name: "د. فاطمة حسن", subject: "الكيمياء", students: 28, rating: 4.7 },
 ]
 
-export function DashboardOverview() {
+export default function DashboardOverview() {
   return (
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

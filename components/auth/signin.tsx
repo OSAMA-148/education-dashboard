@@ -23,7 +23,7 @@ export function SignInPage() {
     e.preventDefault()
     // Handle sign in logic here
     console.log("Sign in:", formData)
-    router.push("/") // Redirect to dashboard after sign in
+    router.push("/dashboard") // Redirect to dashboard after sign in
   }
 
   return (
