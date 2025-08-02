@@ -91,10 +91,6 @@ export default function EducationDashboard() {
                   <User className="ml-2 h-4 w-4" />
                   <span>تسجيل الدخول</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => router.push("/signup")}>
-                  <UserPlus className="ml-2 h-4 w-4" />
-                  <span>إنشاء حساب</span>
-                </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
                   <LogOut className="ml-2 h-4 w-4" />
