@@ -20,7 +20,7 @@ export function Navbar() {
     const router = useRouter();
 
     return (
-        <header className="flex h-16 items-center gap-4 border-b bg-background px-6">
+        <header className="flex h-16 items-center flex-row-reverse gap-4 border-b bg-background px-6">
             <SidebarTrigger />
             <div className="flex-1">
                 <div className="relative max-w-md">
@@ -58,10 +58,6 @@ export function Navbar() {
                     <DropdownMenuItem onClick={() => router.push("/signin")}>
                         <User className="ml-2 h-4 w-4" />
                         <span>تسجيل الدخول</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => router.push("/signup")}>
-                        <UserPlus className="ml-2 h-4 w-4" />
-                        <span>إنشاء حساب</span>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem>
