@@ -1,7 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
+/* Arabic font support */
+
 
 :root {
   --background: oklch(1 0 0);
@@ -122,8 +125,7 @@
   }
 }
 
-/* Arabic font support */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 
 [dir="rtl"] {
   font-family: "Noto Sans Arabic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -156,10 +158,11 @@
 }
 
 /* RTL main content adjustment */
-[dir="rtl"] .peer-data-[state="expanded"]:ml-[--sidebar-width] {
+[dir="rtl"] .peer-data-[state="expanded"] {
   margin-left: 0;
   margin-right: var(--sidebar-width);
 }
+
 
 /* RTL sidebar trigger positioning */
 [dir="rtl"] [data-sidebar="trigger"] {

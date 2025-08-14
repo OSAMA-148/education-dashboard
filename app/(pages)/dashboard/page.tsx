@@ -24,12 +24,12 @@ import {
 } from "recharts";
 
 const revenueData = [
-    { month: "يناير", revenue: 12000 },
-    { month: "فبراير", revenue: 15000 },
-    { month: "مارس", revenue: 18000 },
-    { month: "أبريل", revenue: 16000 },
-    { month: "مايو", revenue: 20000 },
-    { month: "يونيو", revenue: 22000 },
+    { month: "يناير", revenue: 1000 },
+    { month: "فبراير", revenue: 2000 },
+    { month: "مارس", revenue: 3000 },
+    { month: "أبريل", revenue: 4000 },
+    { month: "مايو", revenue: 5000 },
+    { month: "يونيو", revenue: 6000 },
 ];
 
 const subjectData = [
@@ -132,8 +132,16 @@ export default function DashboardOverview() {
                         <ResponsiveContainer width="100%" height={350}>
                             <BarChart data={revenueData}>
                                 <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="month" />
-                                <YAxis />
+                                <XAxis dataKey="month" reversed />
+                                <YAxis
+                                    orientation="right"
+                                    width={40}
+                                    tickMargin={17}
+                                    tickCount={4}
+                                    tickFormatter={(value) =>
+                                        `${value / 1000}k`
+                                    }
+                                />
                                 <Tooltip />
                                 <Bar dataKey="revenue" fill="#3b82f6" />
                             </BarChart>
@@ -155,9 +163,7 @@ export default function DashboardOverview() {
                                     outerRadius={80}
                                     fill="#8884d8"
                                     dataKey="students"
-                                    label={({ name, students }) =>
-                                        `${name}: ${students}`
-                                    }
+                                    label={false}
                                 >
                                     {subjectData.map((entry, index) => (
                                         <Cell
