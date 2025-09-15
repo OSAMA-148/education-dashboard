@@ -108,8 +108,8 @@ export function AppSidebar({ activeSection }: AppSidebarProps) {
                                         isActive={pathname === item.href}
                                     >
                                         <Link href={item.href}>
-                                            <item.icon className="h-4 w-4" />
-                                            <span>{item.title}</span>
+                                            <item.icon className="text-lg" />
+                                            <span className="text-lg">{item.title}</span>
                                         </Link>
                                     </SidebarMenuButton>
                                 </SidebarMenuItem>
